@@ -64,8 +64,8 @@
     <a href="/docs/readme_tr.md">Türkçe</a>
   </p>
 </p>
-<p align="center">Veuillez noter que les traductions ne sont peut-être pas à jour. Essayez utiliser la documentation en anglais si possible.</p>
-<p align="center">Vous aimez ce projet? Pensez à <a href="https://www.paypal.me/anuraghazra">faire un don</a> pour l'améliorer!
+<p align="center">Veuillez noter que les traductions ne sont peut-être pas à jour. Essayez d'utiliser la documentation en anglais si possible.</p>
+<p align="center">Vous aimez ce projet ? Pensez à <a href="https://www.paypal.me/anuraghazra">faire un don</a> pour l'améliorer!
 <a href="https://indiafightscorona.giveindia.org">
   <img src="https://cfstatic.give.do/logo.png" alt="Give india logo" width="200" />
 </a>
