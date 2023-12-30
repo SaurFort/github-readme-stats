@@ -135,6 +135,14 @@ Pour masquer des statistiques spécifiques, vous pouvez passer un paramètre de 
 
 ### Afficher les statistiques individuelles supplémentaire
 
+Pour passer un paramètre de requête `&show=` pour afficher des statistiques supplémentaires en les séparant par des virgules.
+
+> Options: `&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage`
+
+```md
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=anuraghazra&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage)
+```
+
 ### Afficher les icônes
 
 Pour activer les icônes, vous pouvez passer `show_icons=true` dans le paramètre de requête, comme ceci :
@@ -147,19 +155,108 @@ Pour activer les icônes, vous pouvez passer `show_icons=true` dans le paramètr
 
 Avec les thèmes intégrés, vous pouvez personnaliser l'apparence de la carte sans faire de [personnalisation manuelle](#customization).
 
-Utilisez le paramètre `?theme=THEME_NAME` comme suit :-
+Utilisez le paramètre `?theme=THEME_NAME` comme suit :
 
 ```md
 ![Les Stats GitHub de Anurag](https://github-readme-stats.vercel.app/api?username=anuraghazra&show_icons=true&theme=radical)
 ```
 
-#### Tous les thèmes intégrés :-
+#### Tous les thèmes intégrés :
 
-dark, radical, merko, gruvbox, tokyonight, onedark, cobalt, synthwave, highcontrast, dracula
+GitHub Readme Stats vient avec plusieurs thèmes intégrés (`dark`, `radical`, `merko`, `gruvbox`, `tokyonight`, `onedark`, `cobalt`, `synthwave`, `highcontrast`, `dracula`)
 
 <img src="https://res.cloudinary.com/anuraghazra/image/upload/v1595174536/grs-themes_l4ynja.png" alt="GitHub Readme Stat Themes" width="600px"/>
 
-Vous pouvez consulter un aperçu de [tous les thèmes disponibles](../themes/README.md) ou consulter le [fichier de configuration des thèmes](../themes/index.js) & **vous pouvez également ajouter de nouveaux thèmes** si vous le souhaitez :D
+Vous pouvez consulter un aperçu de [tous les thèmes disponibles](../themes/README.md) ou consulter le [fichier de configuration des thèmes](../themes/index.js). Merci de noter que nous avons mis en pause l'ajout de nouveaux thèmes pour réduire les efforts pour les maintenir; toutes les pull requets pour ajouter de nouveaux thèmes seront fermé.
+
+#### Thèmes de carte responsive
+
+[![Anurag's GitHub stats-Dark](https://github-readme-stats.vercel.app/api?username=anuraghazra\&show_icons=true\&theme=dark#gh-dark-mode-only)](https://github.com/anuraghazra/github-readme-stats#responsive-card-theme#gh-dark-mode-only)
+[![Anurag's GitHub stats-Light](https://github-readme-stats.vercel.app/api?username=anuraghazra\&show_icons=true\&theme=default#gh-light-mode-only)](https://github.com/anuraghazra/github-readme-stats#responsive-card-theme#gh-light-mode-only)
+
+Puisque GitHub va recharger les cartes et les envoyé depuis leur [CDN](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-anonymized-urls), nous ne pouvons interférer avec le navigateur/thème GitHub côté serveur. Cependant, il existe quatres méthodes que vous pouvez utiliser pour créer des thèmes dynamiques côté client.
+
+##### Utiliser le thème transparent
+
+Nous avons inclue un thème `transparent`. Ce thème est optimiser pour avoir une bonne apparence sur les thèmes clair et sombre par défaut de GitHub. Pour activer ce thème, vous devez utiliser le paramètre `&theme=transparent` tel que :
+
+```md
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=anuraghazra&show_icons=true&theme=transparent)
+```
+
+<details>
+<summary>:eyes: Exemple d'affichage</summary>
+
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=anuraghazra\&show_icons=true\&theme=transparent)
+
+</details>
+
+##### Ajouter une couche alpha transparent a un thème bg\_color
+
+Vous pouvez utiliser le paramètre `bg_color` pour rendre n'importe lequel des [thèmes disponible](../themes/README.md) transparent. Pour ça, il faut mettre le paramètre `bg_color` sur une couleur avec une couche alpha transparente `bg_color=00000000`:
+
+```md
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=anuraghazra&show_icons=true&bg_color=00000000)
+```
+
+<details>
+<summary>:eyes: Exemple d'affichage</summary>
+
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=anuraghazra\&show_icons=true\&bg_color=00000000)
+
+</details>
+
+##### Utiliser le tag de contexte de thème GitHub
+
+Vous pouvez utiliser [GitHub's theme context tags](https://github.blog/changelog/2021-11-24-specify-theme-context-for-images-in-markdown/) pour échanger le thème de base en fonction du thème de l'utilisater GitHub automatiquement. C'est accomplie par l'ajout de `gh-dark-mode-only` ou `gh-light-mode-only` à la fin de l'URL d'une image. Ce tag permet de définir quand spécifié dans le markdown est uniquement afficher aux utilisateurs utilisant le thème clair ou sombre de GitHub :
+
+```md
+[![Anurag's GitHub stats-Dark](https://github-readme-stats.vercel.app/api?username=anuraghazra&show_icons=true&theme=dark#gh-dark-mode-only)](https://github.com/anuraghazra/github-readme-stats#gh-dark-mode-only)
+[![Anurag's GitHub stats-Light](https://github-readme-stats.vercel.app/api?username=anuraghazra&show_icons=true&theme=default#gh-light-mode-only)](https://github.com/anuraghazra/github-readme-stats#gh-light-mode-only)
+```
+
+<details>
+<summary>:eyes: Exemple d'affichage</summary>
+
+[![Anurag's GitHub stats-Dark](https://github-readme-stats.vercel.app/api?username=anuraghazra\&show_icons=true\&theme=dark#gh-dark-mode-only)](https://github.com/anuraghazra/github-readme-stats#gh-dark-mode-only)
+[![Anurag's GitHub stats-Light](https://github-readme-stats.vercel.app/api?username=anuraghazra\&show_icons=true\&theme=default#gh-light-mode-only)](https://github.com/anuraghazra/github-readme-stats#gh-light-mode-only)
+
+</details>
+
+##### Utiliser la nouvelle fonctionnalité média de GitHub
+
+Pour utiliser [la nouvelle fonctionnalité média de GitHub](https://github.blog/changelog/2022-05-19-specify-theme-context-for-images-in-markdown-beta/) en HTML pour spécifié quand une images doit être affiché pour les utilisateurs ayant le thème clair ou le thème sombre. C'est fait en utilisant l'élément HTML `picture` combiné avec la fonctionnalité média `prefers-color-scheme`.
+
+```html
+<picture>
+  <source
+    srcset="https://github-readme-stats.vercel.app/api?username=anuraghazra&show_icons=true&theme=dark"
+    media="(prefers-color-scheme: dark)"
+  />
+  <source
+    srcset="https://github-readme-stats.vercel.app/api?username=anuraghazra&show_icons=true"
+    media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
+  />
+  <img src="https://github-readme-stats.vercel.app/api?username=anuraghazra&show_icons=true" />
+</picture>
+```
+
+<details>
+<summary>:eyes: Show example</summary>
+
+<picture>
+  <source
+    srcset="https://github-readme-stats.vercel.app/api?username=anuraghazra&show_icons=true&theme=dark"
+    media="(prefers-color-scheme: dark)"
+  />
+  <source
+    srcset="https://github-readme-stats.vercel.app/api?username=anuraghazra&show_icons=true"
+    media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
+  />
+  <img src="https://github-readme-stats.vercel.app/api?username=anuraghazra&show_icons=true" />
+</picture>
+
+</details>
 
 ### Personnalisation
 
