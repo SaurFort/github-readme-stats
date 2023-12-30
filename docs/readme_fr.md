@@ -24,6 +24,9 @@
     </a>
     <br />
     <br />
+    <a href="https://vercel.com?utm\_source=github\_readme\_stats\_team\&utm\_campaign=oss">
+      <img src="./powered-by-vercel.svg"/>
+    </a>
   </p>
 
   <p align="center">
@@ -32,6 +35,10 @@
     <a href="https://github.com/anuraghazra/github-readme-stats/issues/new?assignees=&labels=bug&projects=&template=bug_report.yml">Soumettre un bug</a>
     ·
     <a href="https://github.com/anuraghazra/github-readme-stats/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.yml">Demander une nouveauté</a>
+    .
+    <a href="https://github.com/anuraghazra/github-readme-stats/discussions/1770">FAQ</a>
+    ·
+    <a href="https://github.com/anuraghazra/github-readme-stats/discussions/new?category=q-a">Posez une question</a>
   </p>
   <p align="center">
     <a href="/docs/readme_fr.md">Français</a>
@@ -57,12 +64,23 @@
     <a href="/docs/readme_tr.md">Türkçe</a>
   </p>
 </p>
-<p align="center">Vous aimez ce projet? Pensez <a href="https://www.paypal.me/anuraghazra">à faire un don</a> pour l'améliorer!
+<p align="center">Veuillez noter que les traductions ne sont peut-être pas à jour. Essayez utiliser la documentation en anglais si possible.</p>
+<p align="center">Vous aimez ce projet? Pensez à <a href="https://www.paypal.me/anuraghazra">faire un don</a> pour l'améliorer!
+<a href="https://indiafightscorona.giveindia.org">
+  <img src="https://cfstatic.give.do/logo.png" alt="Give india logo" width="200" />
+</a>
+<p>Vous considérez me supporter dans ce projet en me faisant un don ? S'il vous plait, NE LE FAITES PAS !!!
+<img src="https://cfstatic.give.do/910ede2a-7892-43fe-8c8a-dea45e96d950.webp" alt="Picture of Coromandel Express train tragedy" width="35%">
+L'Inde a récemment connu l'un des accidents de train les plus dévastateurs, et votre aide serait d'une valeur inestimable pour les personnes touchées par cette tragédie.
 
-# Features <!-- omit in toc -->
+S'il vous plaît visiter [ce lien](https://give.do/fundraisers/stand-beside-the-victims-of-the-coromandel-express-train-tragedy-in-odisha-donate-now) et faites un petit don pour aider les personnes dans le besoin. Un petit geste peut avoir un grand impact. :heart:
+</p>
+
+# Fonctionnalité <!-- omit in toc -->
 
 - [Carte des Stats GitHub](#carte-des-stats-github)
     - [Cacher les statistiques individuelles](#cacher-les-statistiques-individuelles)
+    - [Afficher les statistiques individuelles supplémentaire](#afficher-les-statistiques-individuelles-supplémentaire)
     - [Afficher les icônes](#afficher-les-icônes)
     - [Thèmes](#thèmes)
     - [Personnalisation](#personnalisation)
@@ -71,13 +89,23 @@
     - [Démo](#démo)
 - [Carte des langages les + utilisés](#carte-des-langages-les--utilisés)
     - [Usage](#usage-1)
-    - [Cacher certaines langages](#cacher-certaines-langages)
+    - [Cacher certains langages](#cacher-certains-langages)
     - [Carte compacte des langages](#carte-compacte-des-langages)
     - [Démo](#démo-1)
     - [Toutes les démos](#toutes-les-démos)
     - [Conseil rapide (aligner les cartes des dépôts)](#conseil-rapide-aligner-les-cartes-des-dépôts)
   - [Déployer sur votre propre instance Vercel](#déployer-sur-votre-propre-instance-vercel)
-  - [:sparkling\_heart: Supporter le project](#sparkling_heart-supporter-le-project)
+  - [:sparkling\_heart: Supporter le projet](#sparkling_heart-supporter-le-projet)
+
+# Informations importante <!-- omit in toc -->
+
+> [!IMPORTANT]\
+> Puisque l'API GitHub n'autorise que [5 000 requêtes par heure par utilisateur](https://docs.github/fr/graphql/overview/ressource-limitations), l'instance publique de Vercel hébergé sur `https://github-readme-stats.vercel.app/api` peut atteindre la limite de requête (regarde [#1471](#https://github.com/anuraghazra/github-readme-stats/issues/1471)). Nous utilisons le cache pour éviter que cela se produise (regarde https://github.com/anuraghazra/github-readme-stats#options-principales). Vous pouvez arrêtez cette protection en déployant [votre propre instance Vercel(#)désacivez-la-limite-de-requête].
+
+<img alt="Uptime Badge" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fgithub-readme-stats-git-monitoring-github-readme-stats-team.vercel.app%2Fapi%2Fstatus%2Fup%3Ftype%3Dshields">
+
+> [!IMPORTANT]\
+> Nous sommes une petite équipe et pour priorisez notre travail, nous nous référons aux upvotes :+1:. Nous utilisons le tableu de bord des Top Issues pour traquer les demandes de la communauté (regardez [#1935](https://github.com/anuraghazra/github-readme-stats/issues/1935)). N'hésitez pas à upvote les issues et pull requests qui vous intéresses. Nous travaillons sur celle qui ont le plus de upvotes.
 
 # Carte des Stats GitHub
 
@@ -88,6 +116,9 @@ Remplacez la valeur `?username=` par le nom d'utilisateur de votre GitHub.
 ```md
 [![Les Stats GitHub de Anurag](https://github-readme-stats.vercel.app/api?username=anuraghazra)](https://github.com/anuraghazra/github-readme-stats)
 ```
+
+> [!ATTENTION]/
+> Par défaut, la carte de statistiques affiche uniquement des stats telles que les étoiles, les commits et les pull requests des répertoires publique. Pour afficher les statistiques privée sur les cartes de stats, vous pouvez [déployez votre propre instance Vercel](#déployer-sur-votre-propre-instance-vercel) en utilisant votre propre token d'API GitHub.
 
 _Note: Les rangs sont calculés sur la base des statistiques de l'utilisateur, voir [src/calculateRank.js](../src/calculateRank.js)_
 
@@ -101,6 +132,8 @@ Pour masquer des statistiques spécifiques, vous pouvez passer un paramètre de 
 ![Les Stats GitHub de Anurag](https://github-readme-stats.vercel.app/api?username=anuraghazra&hide=contribs,prs)
 ```
 
+### Afficher les statistiques individuelles supplémentaire
+
 ### Afficher les icônes
 
 Pour activer les icônes, vous pouvez passer `show_icons=true` dans le paramètre de requête, comme ceci :
@@ -113,7 +146,7 @@ Pour activer les icônes, vous pouvez passer `show_icons=true` dans le paramètr
 
 Avec les thèmes intégrés, vous pouvez personnaliser l'apparence de la carte sans faire de [personnalisation manuelle](#customization).
 
-Use `?theme=THEME_NAME` parameter like so :-
+Utilisez le paramètre `?theme=THEME_NAME` comme suit :-
 
 ```md
 ![Les Stats GitHub de Anurag](https://github-readme-stats.vercel.app/api?username=anuraghazra&show_icons=true&theme=radical)
@@ -129,13 +162,13 @@ Vous pouvez consulter un aperçu de [tous les thèmes disponibles](../themes/REA
 
 ### Personnalisation
 
-Vous pouvez personnaliser l'apparence de votre `Carte des stats` ou `Carte de dépôt` comme vous le souhaitez avec les paramètres d'URL.
+Vous pouvez personnaliser l'apparence de votre `Carte de stat` ou `Carte de dépôt` comme vous le souhaitez avec les paramètres d'URL.
 
-#### Options principales:
+#### Options principales
 
 - `title_color` - Couleur du titre de la carte _(hex color)_
 - `text_color` - Couleur du texte _(hex color)_
-- `icon_color` - Couleur des icônes si disponibles _(hex color)_
+- `icon_color` - Couleur des icônes, si disponibles _(hex color)_
 - `bg_color` - Couleur du fond de la carte _(hex color)_ **ou** un gradiant de la forme _angle,start,end_
 - `hide_border` - Cache la bordure de la carte _(booléen)_
 - `theme` - Nom du thème, parmis [tous les thèmes disponibles](../themes/README.md)
@@ -207,7 +240,7 @@ Utiliser la variable [show_owner](#customization) pour inclure le nom d'utilisat
 
 La carte des langages principaux montre les langages les plus utilisés par les utilisateurs de GitHub.
 
-_NOTE: Les langages affichés n'indiquent pas mon niveau de compétence ou quelque chose comme ça, c'est une métrique GitHub de quelles langages j'ai le plus de code sur GitHub, c'est une nouvelle fonctionnalité de github-readme-stats_
+_NOTE: Les langages affichés n'indiquent pas mon niveau de compétence ou quelque chose comme ça, c'est une donnée métrique de GitHub de quelles langages j'ai le plus utilisé sur GitHub, c'est une nouvelle fonctionnalité de github-readme-stats_
 
 ### Usage
 
@@ -219,7 +252,7 @@ Extrémité: `api/top-langs?username=anuraghazra`
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra)](https://github.com/anuraghazra/github-readme-stats)
 ```
 
-### Cacher certaines langages
+### Cacher certains langages
 
 Vous pouvez utiliser le paramètre `?hide=language1,language2` pour masquer les langages individuels.
 
@@ -325,13 +358,13 @@ NOTE: Depuis [#58](https://github.com/anuraghazra/github-readme-stats/pull/58) n
    ![](https://files.catbox.moe/qckos0.png)
 1. Sélectionnez `Import Git Repository`
    ![](https://files.catbox.moe/pqub9q.png)
-1. Choisissez root et gardez tout tel quel, ajoutez simplement votre variable d'environnement nommée PAT_1 (comme indiqué), qui contiendra un jeton d'accès personnel (PAT), que vous pouvez facilement créer [ici](https://github.com/settings/tokens/new) (laissez tout tel quel, nommez le simplement quelque chose, cela peut être tout ce que vous voulez)
+1. Choisissez root et gardez tout tel quel, ajoutez simplement votre variable d'environnement nommée PAT_1 (comme indiqué), qui contiendra un jeton d'accès personnel (PAT), que vous pouvez facilement créer [ici](https://github.com/settings/tokens/new) (laissez tout tel quel, nommez le simplement, cela peut être tout ce que vous voulez)
    ![](https://files.catbox.moe/0ez4g7.png)
 1. Cliquez sur "Deploy" et vous êtes prêt à partir. Regardez vos domaines pour utiliser l'API !
 
 </details>
 
-## :sparkling_heart: Supporter le project
+## :sparkling_heart: Supporter le projet
 
 Je mets open-source presque tout ce que je peux, et j'essaie de répondre à tous ceux qui ont besoin d'aide en utilisant ces projets. Évidemment, cela prend du temps. Vous pouvez utiliser ce service gratuitement.
 
@@ -350,4 +383,4 @@ Merci ! :heart:
 
 Les contributions sont les bienvenues ! <3
 
-Fait avec :heart: et JavaScript.
+Fait avec JavaScript et surtout avec :heart:
