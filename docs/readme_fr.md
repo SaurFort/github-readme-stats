@@ -117,10 +117,11 @@ Remplacez la valeur `?username=` par le nom d'utilisateur de votre GitHub.
 [![Les Stats GitHub de Anurag](https://github-readme-stats.vercel.app/api?username=anuraghazra)](https://github.com/anuraghazra/github-readme-stats)
 ```
 
-> [!ATTENTION]/
+> [!WARNING]/
 > Par défaut, la carte de statistiques affiche uniquement des stats telles que les étoiles, les commits et les pull requests des répertoires publique. Pour afficher les statistiques privée sur les cartes de stats, vous pouvez [déployez votre propre instance Vercel](#déployer-sur-votre-propre-instance-vercel) en utilisant votre propre token d'API GitHub.
 
-_Note: Les rangs sont calculés sur la base des statistiques de l'utilisateur, voir [src/calculateRank.js](../src/calculateRank.js)_
+> [!NOTE]\
+> Les rangs disponibles sont S (top 1%), A+ (12,5%), A (25%), A- (37,5%), B+ (50%), B (62,5%), B- (75%), C+ (87,5%) et C (tout le monde). Ces rangs sont basés sur le système du [classement académique japonais](https://en.wikipedia.org/wiki/Academic_grading_in_Japan). Le percentile global est calculé comme une somme pondérée des percentiles pour chaque statistique (nommbre de commits, pull requests, revues, issues, étoilers et followers), basé sur la [distribution exponentielle](https://fr.wikipedia.org/wiki/Loi_exponentielle) et la [loi log-normale](https://fr.wikipedia.org/wiki/Loi_log-normale). L'implémentation peut être examinée à [src/calculateRank.js](https://github.com/anuraghazra/github-readme-stats/blob/master/src/calculateRank.js). Le cercle autour du rank affiche 100 moins le percentile global.
 
 ### Cacher les statistiques individuelles
 
