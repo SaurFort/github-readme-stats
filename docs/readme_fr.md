@@ -117,7 +117,7 @@ Remplacez la valeur `?username=` par le nom d'utilisateur de votre GitHub.
 [![Les Stats GitHub de Anurag](https://github-readme-stats.vercel.app/api?username=anuraghazra)](https://github.com/anuraghazra/github-readme-stats)
 ```
 
-> [!WARNING]/
+> [!WARNING]\
 > Par défaut, la carte de statistiques affiche uniquement des stats telles que les étoiles, les commits et les pull requests des répertoires publique. Pour afficher les statistiques privée sur les cartes de stats, vous pouvez [déployez votre propre instance Vercel](#déployer-sur-votre-propre-instance-vercel) en utilisant votre propre token d'API GitHub.
 
 > [!NOTE]\
